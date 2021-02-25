@@ -1,0 +1,39 @@
+.notification{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    >div{
+        margin-bottom: 20px;
+    }
+    .eda-notify-message-fade-out{
+        animation: fadeOut .5s linear forwards;
+        
+    }
+    .eda-notify-message-fade-in{
+
+        animation: fadeIn .5s linear forwards;
+        animation-delay: 0ms;
+    }
+}
+@keyframes fadeOut {
+	0% { opacity: 1; }
+	100% { 
+        opacity: 0; 
+        display: none;
+        transform: translateY(-61px);
+    }
+}
+@keyframes fadeIn {
+    0% { 
+        opacity: 0;
+        transform: translateY(-61px);
+    }
+
+	100% { 
+        opacity: 1; 
+        transform: translateY(0);
+    }
+}

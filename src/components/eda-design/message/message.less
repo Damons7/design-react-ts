@@ -1,0 +1,110 @@
+@import "../styles/variables.less";
+@import "../styles/mixin.less";
+.eda-message {
+  position: relative;
+  display: inline-block;
+  > div {
+    display: inline-block;
+  }
+  //   display: flex;
+  //   justify-content: flex-start;
+  //   align-items: center;
+  color: @body-color;
+  padding: 10px 16px;
+
+  min-width: 380px;
+
+  pointer-events: all;
+  box-sizing: border-box;
+  &.eda-message-type {
+    box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12),
+      0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 2px;
+    .eda-message-content {
+      padding-left: 25px;
+    }
+  }
+  .eda-message-content {
+    padding-left: 30px;
+    padding-right: 20px;
+  }
+  .eda-message-custom-content {
+    color: #606266;
+    font-size: 14px;
+    padding-right: 12px;
+    vertical-align: top;
+  }
+  .eda-type-icon {
+    position: absolute;
+    // top: 50%;
+    left: 15px;
+    // transform: translateY(-50%);
+  }
+
+  .message-close {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #c0c4cc;
+    font-size: 16px;
+    span {
+      cursor: pointer;
+    }
+  }
+}
+
+.eda-message-success {
+  background-color:@green-100;
+  border-color:@green-200;
+  .eda-type-icon {
+    color: @green-400;
+  }
+  .eda-message-custom-content {
+    color: @green-400;
+  }
+}
+
+.eda-message-error {
+    background-color:@red-100;
+    border-color: @red-150;
+  .eda-type-icon {
+    color:@red-300;
+  }
+  .eda-message-custom-content {
+    color:@red-300;
+  }
+}
+.eda-message-warning {
+    background-color:@yellow-100;
+    border-color: @yellow-200;
+  .eda-type-icon {
+    color: @yellow-300;
+  }
+  .eda-message-custom-content {
+    color: @yellow-300;
+  }
+}
+.eda-message-primary {
+  box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12),
+    0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+  background: @white;
+  border-radius: 2px;
+  min-width: 0px;
+  .eda-type-icon {
+    color: @yellow-300;
+  }
+}
+
+.eda-message-default {
+  .eda-type-icon {
+    color: @yellow-300;
+    i {
+      font-size: 24px;
+    }
+  }
+}
+.eda-message-none {
+  display: none;
+}

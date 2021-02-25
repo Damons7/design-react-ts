@@ -1,0 +1,50 @@
+.eda-label{
+    display: inline-block;
+    width: 100%;
+    .eda-label-inner{
+        line-height: 24px;
+        color: #2e303f;
+        line-height: 24px;
+        width: 75px;
+    }
+    &.eda-label-left-inner{
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        padding-right: 12px;
+
+    }
+    &.eda-label-top-inner{
+        display: flex;
+        flex-direction: column;
+        white-space: nowrap;
+        padding-right: 12px;
+
+    }
+    .eda-label-required{
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        // height: 24px;
+        &::before{
+            content: "*";
+            color: #f56c6c;
+            margin-right: 4px;
+            padding-top: 2px
+        }
+    }
+    .eda-label-left{
+        text-align: left;
+    }
+    .eda-label-right{
+        text-align: right;
+    }
+    .eda-label-center{
+        text-align: center;
+    }
+    .eda-label-top{
+        // padding-bottom: 10px;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+}

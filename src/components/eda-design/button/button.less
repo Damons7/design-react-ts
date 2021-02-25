@@ -1,0 +1,153 @@
+@import "../styles/variables.less";
+@import "../styles/mixin.less";
+.eda-btn {
+    position: relative;
+    display: inline-block;
+    font-weight: @btn-font-weight;
+    line-height: 1;
+    color: @body-color;
+    white-space: nowrap;
+    text-align: center;
+    vertical-align: middle;
+    background-image: none;
+    border: @btn-border-width solid transparent;
+    outline: none;
+    .button-size(
+      @btn-padding-y,
+      @btn-padding-x,
+      @btn-font-size,
+      @border-radius
+    );
+    box-shadow: @btn-box-shadow;
+    cursor: pointer;
+    transition: @btn-transition;
+    &.disabled,
+    &[disabled] {
+      cursor: not-allowed;
+      opacity: @btn-disabled-opacity;
+      box-shadow: none;
+      > * {
+        pointer-events: none;
+      }
+    }
+  }
+  
+  .eda-btn-lg {
+    .button-size(
+      @btn-padding-y-lg,
+      @btn-padding-x-lg,
+      @btn-font-size-lg,
+      @btn-border-radius-lg
+    );
+  }
+
+  .eda-btn-sm {
+
+    .button-size(
+      @btn-padding-y-sm,
+      @btn-padding-x-sm,
+      @btn-font-size-sm,
+      @btn-border-radius-sm
+    );
+  }
+    .eda-btn-ssm {
+      font-size: 14px;
+      font-family: Microsoft YaHei;
+      font-weight: 400;
+      line-height: 28px!important;
+      padding: 0 14px;
+      text-align: center;
+      cursor: pointer;
+  }
+  .eda-btn-primary {
+    // .button-style(@primary, @primary, @white);
+    border: 1px solid #999;
+    color: #999;
+    padding: 0 16px;
+    &:hover{
+      border: 1px solid #333;
+      color: #333;
+    }
+  }
+  .eda-btn-danger {
+    .button-style(@white, @danger, @danger);
+    &:hover{
+      color: @white;
+      background-color: @danger;
+  }
+  }
+  .eda-btn-success {
+    .button-style(
+      @white,
+      @success,
+      @success,
+      @white,
+      @success,
+      @success
+    );
+    &:hover{
+      color: @white;
+      background-color: @success;
+  }
+  }
+  .eda-btn-warning {
+    .button-style(@warning, @warning, @white);
+    &:hover{
+      color: @white;
+      background-color: @warning;
+  }
+  }
+  .eda-btn-default {
+    .button-style(
+      @white,
+      @blue,
+      @blue,
+      @white,
+      @blue,
+      @blue
+    );
+    &:hover{
+      color: @white;
+      background-color: @blue;
+  }
+  }
+
+  .eda-btn-action {
+    background: #fff;
+    border: 1px solid #dcdfe6;
+    color: #606266;
+    // .button-style(
+    //   @white,
+    //   @blue,
+    //   @blue,
+    //   @white,
+    //   @blue,
+    //   @blue
+    // );
+    &:hover{
+      color: @blue-100;;
+      border-color: #c6e2ff;
+      background-color: #ecf5ff;
+  }
+  }
+  .eda-btn-link {
+    font-weight: @font-weight-normal;
+    color: @btn-link-color;
+    text-decoration: @link-decoration;
+    box-shadow: none;
+    &:hover {
+      color: @btn-link-hover-color;
+      text-decoration: @link-hover-decoration;
+    }
+    &:focus,
+    &.focus {
+      text-decoration: @link-hover-decoration;
+      box-shadow: none;
+    }
+    &:disabled,
+    &.disabled {
+      color: @btn-link-disabled-color;
+      pointer-events: none;
+    }
+  }
+  

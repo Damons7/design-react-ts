@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "@/*":["./src/*"],
+        "@components":["./src/components/*"],
+        "@view/*": ["./src/view"],
+        "@eda/*": ["./src/components/eda-design/*"]
+      }
+    }
+  }

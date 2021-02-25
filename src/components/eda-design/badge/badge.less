@@ -1,0 +1,28 @@
+
+@import "../styles/variables.less";
+.eda-badge{
+    position: relative;
+    display: inline-block;
+    .eda-badge-count{
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        display: inline-block;
+        z-index: auto;
+        min-width: 18px;
+        height: 18px;
+        color: @white;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        white-space: nowrap;
+        text-align: center;
+        background: @red-400;
+        border-radius: 50%;
+        -webkit-box-shadow: 0 0 0 1px @white;
+        box-shadow: 0 0 0 1px @white;
+    }
+    .eda-count-overflow{
+        padding: 0 6px;
+    }
+}

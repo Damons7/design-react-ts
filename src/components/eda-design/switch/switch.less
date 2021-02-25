@@ -1,0 +1,74 @@
+.eda-switch-wrap{
+    display: inline-block;
+}
+.eda-switch{
+    margin: 0;
+    padding: 0;
+    color: rgba(0,0,0,.85);
+    font-size: 14px;
+    line-height: 1.5715;
+    list-style: none;
+    font-feature-settings: "tnum";
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    min-width: 40px;
+    height: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+    background-color: rgba(0,0,0,.25);
+    border: 0;
+    border-radius: 100px;
+    cursor: pointer;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    user-select: none;
+    &.eda-switch-disabled {
+        cursor: not-allowed;
+        opacity: .4;
+    }
+    &:focus{
+        // border-color: #409eff;
+        box-shadow: 0 0 0 2px rgba(24,144,255,.2);
+        outline: 0;
+    }
+    .eda-switch-handle {
+        top: 2px;
+        left: 1px;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        transition: all .2s ease-in-out;
+        &::before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: #fff;
+            border-radius: 8px;
+            -webkit-box-shadow: 0 2px 4px 0 rgba(0,35,11,.2);
+            box-shadow: 0 2px 4px 0 rgba(0,35,11,.2);
+            content: "";
+        }
+    }
+    &.eda-switch-checked {
+        background-color: #1890ff;
+        .eda-switch-handle {
+            left: calc(100% - 18px);
+        }
+        .eda-switch-inner {
+            margin: 0 25px 0 7px;
+        }
+    }
+
+    .eda-switch-inner {
+        display: block;
+        margin: 0 7px 0 25px;
+        color: #fff;
+        font-size: 12px;
+        -webkit-transition: margin .2s;
+        transition: margin .2s;
+    }
+    
+}

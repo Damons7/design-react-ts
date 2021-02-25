@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\.."
+		},
+		{
+			"name": ".FEInterview",
+			"path": "C:\\Users\\Administrator\\.FEInterview"
+		}
+	],
+	"settings": {
+		"typescript.tsdk": "node_modules\\typescript\\lib",
+		"liveServer.settings.port": 5501
+	}
+}

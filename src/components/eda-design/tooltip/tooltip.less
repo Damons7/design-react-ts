@@ -1,0 +1,66 @@
+.eda-tooltip-wrap{
+    display: block;
+    position: relative;
+    .eda-tooltip-title{
+        position: absolute;
+        border-radius: 4px;
+        padding: 10px;
+        z-index: 2000;
+        font-size: 12px;
+        line-height: 1.2;
+        min-width: 10px;
+        // width: 100%;
+        display: none;
+        // max-height: 0px;
+        // overflow: hidden;
+        // word-wrap: break-word;
+        &.eda-tooltip-top{
+            top: 100%;
+            // margin-top: -100%;
+            top:-100%;
+            left: 50%;
+            transform: translate(-50%,-40%);
+            background: #303133;
+            color: #fff;
+            &::before{
+                position: absolute;
+                content: " ";
+                display: block;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 0;
+                height: 0;
+                border-color: transparent;
+                border-style: solid;
+                border-width: 6px;
+                border-top-color: #303133;
+            }
+        }
+        &.eda-tooltip-bottom{
+            top: 100%;
+            margin-top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #303133;
+            color: #fff;
+            &::before{
+                position: absolute;
+                content: " ";
+                display: block;
+                top: -12px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 0;
+                height: 0;
+                border-color: transparent;
+                border-style: solid;
+                border-width: 6px;
+                border-bottom-color: #303133;
+            }
+        }
+    }
+    .eda-tooltip-title-show{
+        display: inline-block;
+    }
+}

@@ -1,0 +1,106 @@
+.eda-tag{
+    background-color: #ecf5ff;
+    display: inline-block;
+    height: 32px;
+    padding: 0 10px;
+    line-height: 30px;
+    font-size: 12px;
+    color: #409eff;
+    border: 1px solid #d9ecff;
+    border-radius: 4px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    &.eda-tag-none{
+        display: none;
+    }
+    &.eda-tag-edit{
+        cursor: pointer;
+        background: #fff;
+        color:#606266;
+        border: 1px solid #dcdfe6;
+        &:hover{
+            color: #409eff;
+            border: 1px solid #d9ecff;
+            background-color: #ecf5ff;
+        }
+        input{
+            line-height: 29px;
+            max-width: 100%;
+            width: 50px;
+            padding: 0 10px;
+            outline: 0;
+            border: 1px solid #409eff;
+            border-radius: 4px;
+        }
+    }
+    &.eda-tag-edit-show{
+        padding: 0;
+        border: 0;
+        &:hover{
+            border: 0;
+        }
+    }
+
+    .eda-tag-close{
+        border-radius: 50%;
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+        font-size: 16px;
+        height: 16px;
+        width: 16px;
+        line-height: 16px;
+        vertical-align: middle;
+        top: -1px;
+        right: -5px;
+        &:hover{
+            color: #fff;
+            background-color: #409eff;
+        }
+    }
+    &.eda-tag-success {
+        background-color: #f0f9eb;
+        border-color: #e1f3d8;
+        color: #67c23a;
+        .eda-tag-close{
+            &:hover{
+                color: #fff;
+                background-color: #67c23a;
+            }
+        }
+    }
+    &.eda-tag-info {
+        background-color: #f4f4f5;
+        border-color: #e9e9eb;
+        color: #909399;
+        .eda-tag-close{
+            &:hover{
+            color: #fff;
+            background-color: #909399!important;
+        }}
+    }
+    &.eda-tag-warning {
+        background-color: #fdf6ec;
+        border-color: #faecd8;
+        color: #e6a23c;
+        .eda-tag-close{
+            &:hover{
+                color: #fff;
+                background-color: #e6a23c;
+            }
+        }
+
+    }
+    &.eda-tag-danger {
+        background-color: #fef0f0;
+        border-color: #fde2e2;
+        color: #f56c6c;
+        .eda-tag-close{
+            &:hover{
+                color: #fff;
+                background-color: #f56c6c;
+            }
+        }
+
+    }
+}

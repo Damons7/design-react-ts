@@ -1,0 +1,118 @@
+@import "../styles/variables.less";
+@import "../styles/mixin.less";
+.eda-menu-container {
+  display: inline-block;
+  ul{
+    padding: 0;
+}
+}
+.eda-eda-menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  list-style: none;
+  min-width: 80px;
+  color: #606266;
+  > .eda-menu-item {
+    box-sizing: border-box;
+    text-align: left;
+    cursor: pointer;
+    line-height: 38px;
+    transition: all .3s linear;
+    // transition: @menu-transition;
+    &.is-disabled {
+      pointer-events: none;
+      cursor: default;
+    }
+
+
+    &.eda-menu-item-hover{
+        background-color: #ededee;
+    }
+    &.is-active{
+        color: #2e303f!important;
+        background-color: #cdced2!important;
+        transition: background-color .3s cubic-bezier(.645,.045,.355,1),color .3s cubic-bezier(.645,.045,.355,1)
+    }
+  }
+  .eda-menu-item {
+    position: relative;
+    .eda-submenu-title {
+      display: flex;
+      align-items: center;
+    }
+    .menu-opened-title{
+        color: #2e303f;
+    }   
+    .arrow-icon {
+      transition: transform 0.25s ease-in-out;
+      margin-left: 3px;
+    }
+    &:hover {
+      .arrow-icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .is-vertical {
+    .arrow-icon {
+      transform: rotate(0deg) !important;
+    }
+  }
+  .is-vertical.is-opened {
+    .arrow-icon {
+      transform: rotate(180deg) !important;
+    }
+  }
+  .eda-submenu {
+    display: none;
+    list-style: none;
+    white-space: nowrap;
+    transition: all .3s linear;
+    .eda-menu-item {
+      position: relative;
+      display: block;
+      font-size: 14px;
+      text-align: left;
+      text-decoration: none;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      cursor: pointer;
+      line-height: 38px;
+      transition: background-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+      &.eda-menu-item-hover{
+        background-color: #ededee;
+      }
+      &.is-active{
+        color: #2e303f;
+        background-color: #cdced2;
+        transition: background-color .3s cubic-bezier(.645,.045,.355,1),color .3s cubic-bezier(.645,.045,.355,1)
+      }
+    }
+    .eda-menu-item a {
+      color: #606266;
+      text-decoration: none;
+    //   &.is-active,
+    //   &:hover {
+    //     color: @primary !important;
+    //   }
+    }
+  }
+  .eda-submenu.menu-opened {
+    display: block;
+
+  }
+}
+
+.menu-vertical {
+  flex-direction: column;
+  border-bottom: 0px;
+  border-right: @menu-border-width solid @menu-border-color;
+  > .eda-menu-item {
+    &.is-active,
+    &:hover {
+      border-bottom: 0px;
+    }
+  }
+}
